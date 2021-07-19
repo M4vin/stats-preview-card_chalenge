@@ -1,6 +1,254 @@
-@import url('htps://fonts.googleapis.com/css2?family-Inter:wght@400;700&display=swap');
-
+@import url("htps://fonts.googleapis.com/css2?family-Inter:wght@400;700&display=swap");
 * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #090b1a;
+}
+
+.main {
+  height: 100vh;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 100px;
+      grid-template-rows: 1fr 100px;
+}
+
+.main .main-stats-card {
+  margin: 0 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.main .main-stats-card .text-container {
+  background-color: #1b1938;
+  max-width: 540px;
+  border-radius: 0.75em 0 0 0.75em;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 150px;
+      grid-template-rows: 1fr 150px;
+}
+
+.main .main-stats-card .text-container .text {
+  margin: 50px 80px 0;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+}
+
+.main .main-stats-card .text-container .text h1 span {
+  color: #aa5cdb;
+}
+
+.main .main-stats-card .text-container .text p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.main .main-stats-card .text-container ul.stats {
+  list-style: none;
+  margin: 0 90px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.main .main-stats-card .text-container ul.stats li {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main .main-stats-card .text-container ul.stats li span {
+  font-weight: 700;
+  color: white;
+  font-size: 1.9em;
+  line-height: 1.6;
+}
+
+.main .main-stats-card .image-container {
+  max-width: 540px;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  background-color: #9400f0;
+  border-radius: 0 0.75em 0.75em 0;
+}
+
+.main .main-stats-card .image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 540px;
+  max-height: 450px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0.75em 0.75em 0;
+  opacity: 0.6;
+}
+
+@media (max-width: 1200px) {
+  .text-container {
+    background-color: #1b1938;
+    max-width: 540px;
+    border-radius: 0.75em 0 0 0.75em;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 150px;
+        grid-template-rows: 1fr 150px;
+  }
+  .text-container .text {
+    margin: 0 80px;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+  }
+  .text-container .text h1 {
+    font-size: 2.6vw;
+  }
+  .text-container .text h1 span {
+    color: #aa5cdb;
+  }
+  .text-container .text p {
+    font-size: 1.5vw;
+  }
+  .text-container .stats {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .text-container .stats li {
+    font-size: 1vw;
+  }
+  .text-container .stats li span {
+    font-size: 2.6vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .main .main-stats-card {
+    margin: 100px 0;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main .main-stats-card .text-container {
+    border-radius: 0 0 0.75em 0.75em;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+    text-align: center;
+  }
+  .main .main-stats-card .text-container .text {
+    gap: 50px;
+  }
+  .main .main-stats-card .text-container .text h1 {
+    font-size: 32px;
+  }
+  .main .main-stats-card .text-container .text p {
+    font-size: 15px;
+  }
+  .main .main-stats-card .text-container ul.stats li {
+    font-size: 15px;
+  }
+  .main .main-stats-card .text-container ul.stats li span {
+    font-size: 32px;
+  }
+  .main .main-stats-card .image-container {
+    max-height: 450px;
+    height: auto;
+    border-radius: 0.75em 0.75em 0 0;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .main .main-stats-card .image-container img {
+    height: 450px;
+    border-radius: 0.75em 0.75em 0 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    font-size: 2.5vw;
+    margin: 0;
+  }
+  .main .main-stats-card {
+    margin: 60px 20px 10px;
+    -ms-grid-rows: 260px 1fr;
+        grid-template-rows: 260px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main .main-stats-card .text-container {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    border-radius: 0 0 0.75em 0.75em;
+    text-align: center;
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+  }
+  .main .main-stats-card .text-container .text {
+    margin: 50px 37px 0;
+  }
+  .main .main-stats-card .text-container .text h1 {
+    font-size: 3em;
+  }
+  .main .main-stats-card .text-container .text p {
+    margin: 15px 0;
+    font-size: 15px;
+  }
+  .main .main-stats-card .text-container ul.stats {
+    margin: 10px 100px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .main .main-stats-card .text-container ul.stats li {
+    font-size: 14px;
+  }
+  .main .main-stats-card .text-container ul.stats li span {
+    font-size: 2em;
+  }
+  .main .main-stats-card .image-container {
+    height: 261px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    border-radius: 0.75em 0.75em 0 0;
+  }
+  .main .main-stats-card .image-container img {
+    height: 261px;
+    border-radius: 0.75em 0.75em 0 0;
+  }
+}
+
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -83,7 +331,20 @@
   border-radius: 0 0.75em 0.75em 0;
 }
 
-@media screen and (max-width: 375px) {
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 375px) {
   .main {
     font-size: 2.5vw;
   }
@@ -134,4 +395,5 @@
     background-position: center;
     background-size: cover;
   }
-}
+} */
+/*# sourceMappingURL=index.css.map */
