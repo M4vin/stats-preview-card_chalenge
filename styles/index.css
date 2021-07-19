@@ -231,6 +231,7 @@ body {
   }
   .main .main-stats-card .text-container ul.stats li {
     font-size: 14px;
+    margin: 10px 0;
   }
   .main .main-stats-card .text-container ul.stats li span {
     font-size: 2em;
